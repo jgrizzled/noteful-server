@@ -1,0 +1,4 @@
+TRUNCATE
+  folders,
+  notes
+  RESTART IDENTITY CASCADE;
