@@ -6,7 +6,7 @@ Express server for Noteful client.
 
 1. Configure Postgres server, set timezone to UTC
 2. Create `noteful` and optional `noteful_test` databases in Postgres
-3. Create `.env` with DB_URL and TEST_DB_URL
+3. Create `.env` with DATABASE_URL and TEST_DATABASE_URL
 4. `yarn`
 5. Migrate DB with `yarn migrate 2`
 

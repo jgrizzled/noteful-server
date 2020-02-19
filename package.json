@@ -9,7 +9,7 @@
     "dev": "nodemon src/server",
     "test": "mocha --watch --file test/setup.js",
     "predeploy": "mocha --bail --exit && yarn audit",
-    "deploy": "git push",
+    "deploy": "git push heroku master",
     "migrate": "postgrator --config postgrator-config.js"
   },
   "dependencies": {
