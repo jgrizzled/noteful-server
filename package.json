@@ -8,9 +8,11 @@
     "start": "node src/server",
     "dev": "nodemon src/server",
     "test": "mocha --watch --file test/setup.js",
-    "predeploy": "mocha --bail --exit && yarn audit",
+    "predeploy": "mocha --bail --exit && yarn audit && yarn migrate:production",
     "deploy": "git push heroku master",
-    "migrate": "postgrator --config postgrator-config.js"
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test yarn migrate",
+    "migrate:production": "env SSL=true DATABASE_URL=$(heroku config:get DATABASE_URL) yarn migrate"
   },
   "dependencies": {
     "cors": "^2.8.5",
